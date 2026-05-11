@@ -1,8 +1,8 @@
 # Pac-Man Arcade Canvas
 
-A Vite + TypeScript + HTML5 Canvas remake inspired by the 1980 arcade Pac-Man, built with pure CSS and generated bitmap PNG sprites.
+Um remake em Vite + TypeScript + HTML5 Canvas inspirado no Pac-Man arcade de 1980, criado com CSS puro e bitmap PNG sprites gerados.
 
-## Run
+## Executar
 
 ```bash
 npm install
@@ -11,9 +11,9 @@ npm run optimize-assets
 npm run dev
 ```
 
-Open the Vite URL printed by the dev server. Controls are arrow keys, `Enter` or `Space` to start, `P` to pause, and `F3` for debug overlays. Gamepad left stick, start, and select/back are also supported.
+Abra a URL do Vite exibida pelo dev server. Os controles são as setas do teclado, `Enter` ou `Space` para iniciar, `P` para pausar e `F3` para debug overlays. Gamepad com left stick, start e select/back também é suportado.
 
-## Build And Verify
+## Build e Verificação
 
 ```bash
 npm test
@@ -21,35 +21,35 @@ npm run build
 npm run preview
 ```
 
-Asset pipeline commands:
+Comandos da asset pipeline:
 
 ```bash
 npm run pack-sprites
 npm run optimize-assets
 ```
 
-## Architecture
+## Arquitetura
 
-The implementation is split into focused modules under `src/`:
+A implementação é dividida em módulos focados dentro de `src/`:
 
-- `core`: fixed timestep loop and game orchestration
+- `core`: fixed timestep loop e orquestração do jogo
 - `entities`: Pacman, ghosts, pellets, fruit
-- `systems`: deterministic movement, scoring, collision, particles
-- `maps`: numeric tile matrix, collision helpers, tile/world conversion
-- `rendering`: Canvas renderer and PNG spritesheet loader
-- `audio`: centralized Web Audio sound effects
-- `input`: keyboard and gamepad input
-- `ai`: ghost state machine and target-tile logic
-- `ui`, `utils`, `constants`, `debug`, `assets`: screen state, persistence, configuration, overlays, asset boundary
+- `systems`: movimento determinístico, scoring, collision, particles
+- `maps`: matriz numérica de tiles, collision helpers, conversão tile/world
+- `rendering`: Canvas renderer e PNG spritesheet loader
+- `audio`: sound effects centralizados com Web Audio
+- `input`: input de keyboard e gamepad
+- `ai`: ghost state machine e lógica de target-tile
+- `ui`, `utils`, `constants`, `debug`, `assets`: screen state, persistência, configuração, overlays, asset boundary
 
 ## Gameplay Features
 
-The game includes a classic blue maze, pellets, power pellets, fruit, side tunnels, lives, score, local high score, level progression, increasing speed, pause, start/game-over screens, level transitions, Pacman direction buffering, smooth tile movement, ghost scatter/chase/frightened/eaten modes, target-tile ghost behavior, debug hitboxes/targets/FPS, simple particles, CRT scanline styling, and generated arcade audio tones.
+O jogo inclui o clássico labirinto azul, pellets, power pellets, fruit, side tunnels, lives, score, local high score, progressão de level, velocidade crescente, pause, telas de start/game-over, transições de level, direction buffering do Pacman, movimento suave por tile, modos scatter/chase/frightened/eaten dos ghosts, comportamento target-tile dos ghosts, debug de hitboxes/targets/FPS, particles simples, estilo CRT scanline e tons de áudio arcade gerados.
 
 ## Bitmap Assets
 
-No SVG assets are used. `scripts/pack-sprites.mjs` generates raster PNG sprite sheets for Pacman, ghosts, frightened ghosts, eyes, pellets, fruits, maze tiles, and HUD icons. It also writes `assets/raw-ai/prompts.json` with prompts containing the required terms:
+Nenhum SVG asset é usado. `scripts/pack-sprites.mjs` gera raster PNG sprite sheets para Pacman, ghosts, frightened ghosts, eyes, pellets, fruits, maze tiles e HUD icons. Ele também escreve `assets/raw-ai/prompts.json` com prompts contendo os termos obrigatórios:
 
 `pixel art`, `bitmap sprite`, `retro arcade`, `transparent background`, `sprite sheet`, `16x16 grid`, and `no antialiasing`.
 
-`scripts/optimize-assets.mjs` copies the generated bitmap assets to `public/assets` and writes a cache-busting manifest.
+`scripts/optimize-assets.mjs` copia os bitmap assets gerados para `public/assets` e escreve um cache-busting manifest.
