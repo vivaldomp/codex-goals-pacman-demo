@@ -1,0 +1,5 @@
+{
+  "type": "procedural-web-audio",
+  "manager": "src/audio/audio-manager.ts",
+  "sounds": ["start", "pellet", "power", "ghost", "death", "intermission", "level"]
+}

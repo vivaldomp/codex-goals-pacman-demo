@@ -1,0 +1,18 @@
+{
+  "cacheBust": "mp0k27c6",
+  "png": [
+    "sprites/eyes.png",
+    "sprites/frightened.png",
+    "sprites/fruits.png",
+    "sprites/ghosts.png",
+    "sprites/pacman.png",
+    "sprites/pellets.png",
+    "tilesets/maze.png",
+    "ui/hud.png"
+  ],
+  "metadata": [
+    "atlas.json",
+    "audio/tones.json",
+    "raw-ai/prompts.json"
+  ]
+}

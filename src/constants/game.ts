@@ -1,0 +1,12 @@
+export const TILE_SIZE = 16;
+export const MAZE_COLUMNS = 28;
+export const MAZE_ROWS = 31;
+export const LOGICAL_WIDTH = MAZE_COLUMNS * TILE_SIZE;
+export const HUD_HEIGHT = 80;
+export const LOGICAL_HEIGHT = MAZE_ROWS * TILE_SIZE + HUD_HEIGHT;
+export const FIXED_TIMESTEP = 1 / 60;
+export const START_LIVES = 3;
+export const POWER_DURATION = 7;
+export const FRUIT_DURATION = 9;
+export const BASE_PACMAN_SPEED = 82;
+export const BASE_GHOST_SPEED = 74;

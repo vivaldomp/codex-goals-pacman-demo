@@ -1,0 +1,14 @@
+{
+  "frameSize": 16,
+  "sheets": [
+    "pacman",
+    "ghosts",
+    "frightened",
+    "eyes",
+    "pellets",
+    "fruits",
+    "maze",
+    "hud"
+  ],
+  "generatedAt": "2026-05-11T01:58:04.766Z"
+}
